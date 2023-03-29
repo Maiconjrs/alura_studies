@@ -1,13 +1,13 @@
 import React from "react";
-import './style.scss'
+import style from './Botao.module.scss'
 
-class Botao extends React.Component {
+class Botao extends React.Component<{children: React.ReactNode}> {
   render() {
     // const isActive = false;
     // const styles = {
     //   backgroundColor: isActive ? "green" : "red",
     // };
-    return <button className="botao">Botão</button>;
+    return <button className={style.botao}>{this.props.children}</button>;
   }
 }
 
